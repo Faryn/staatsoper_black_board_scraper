@@ -87,7 +87,7 @@ async def check_for_updates():
             if new_entry not in old_data:
                 print(f"New entry: {new_entry}")
                 try:
-                    await bot.send_message(chat_id=CHAT_ID, text=f"Staatsoper Black Board: {content}")
+                    await bot.send_message(chat_id=CHAT_ID, text=f"Staatsoper Black Board: {new_entry['content']}")
                 except Exception as e:
                     print(f"Error sending Telegram message: {e}")
 
